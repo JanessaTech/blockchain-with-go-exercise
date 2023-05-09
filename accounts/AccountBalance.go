@@ -5,27 +5,33 @@ import (
 	"fmt"
 	getstarted "hi-supergirl/blockchain-with-go-exercise/get-started"
 	"log"
+	"math"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/common"
 )
 
-func ReadBalanceInfo(blockNum int64) {
+func ReadBalanceInfo() {
 	client := getstarted.CreateConn()
-	var blockNumber *big.Int
-	if blockNum >= 0 {
-		blockNumber = big.NewInt(blockNum)
-	} else {
-		blockNumber = nil
-	}
 
 	account := common.HexToAddress("0xEb600bE51572beB77B86F9f32BF14E8DbFAb144a")
-	balance, err := client.BalanceAt(context.Background(), account, blockNumber)
+	balance, err := client.BalanceAt(context.Background(), account, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("balance is ", balance, "for ", account, " in block ", blockNum)
-	//output, eg:
-	//balance is  99994904880749389936 for  0xEb600bE51572beB77B86F9f32BF14E8DbFAb144a  in block  2
+	fmt.Println("balance is ", balance, "for ", account, " in latest block ")
+
+	blockNumber := big.NewInt(3)
+
+	balance1, err1 := client.BalanceAt(context.Background(), account, blockNumber)
+	if err1 != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("balance is ", balance1, "for ", account, " in block ", 3)
+
+	fbalance := new(big.Float)
+	fbalance.SetString(balance1.String())
+	ethValue := new(big.Float).Quo(fbalance, big.NewFloat(math.Pow10(18)))
+	fmt.Println("ethValue:", ethValue)
 
 }

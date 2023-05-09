@@ -1,10 +1,12 @@
 package main
 
 import (
-	"hi-supergirl/blockchain-with-go-exercise/accounts"
+	erctokendemo "hi-supergirl/blockchain-with-go-exercise/ERCTokenDemo"
 )
 
 func main() {
 	//getstarted.CreateConn()
-	accounts.ReadBalanceInfo(2)
+	//accounts.ReadBalanceInfo()
+	erctokendemo.ERC20Testcases()
+
 }
