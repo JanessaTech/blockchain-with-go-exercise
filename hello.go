@@ -1,6 +1,7 @@
 package main
 
 import (
+	"hi-supergirl/blockchain-with-go-exercise/accounts"
 	getstarted "hi-supergirl/blockchain-with-go-exercise/get-started"
 )
 
@@ -9,5 +10,6 @@ func getStarted() {
 }
 
 func main() {
-	getStarted()
+	//getStarted()
+	accounts.ReadAccountInfo()
 }
