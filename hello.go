@@ -6,5 +6,5 @@ import (
 
 func main() {
 	//getstarted.CreateConn()
-	accounts.ReadAccountInfo()
+	accounts.ReadBalanceInfo(2)
 }
