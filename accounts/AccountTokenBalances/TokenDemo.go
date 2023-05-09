@@ -1,4 +1,4 @@
-package erctokendemo
+package accounttokenbalances
 
 import (
 	"context"

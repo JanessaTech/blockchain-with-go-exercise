@@ -1,4 +1,4 @@
-package accounts
+package accountbalances
 
 import (
 	"context"
@@ -21,13 +21,13 @@ func ReadBalanceInfo() {
 	}
 	fmt.Println("balance is ", balance, "for ", account, " in latest block ")
 
-	blockNumber := big.NewInt(3)
+	blockNumber := big.NewInt(2)
 
 	balance1, err1 := client.BalanceAt(context.Background(), account, blockNumber)
 	if err1 != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("balance is ", balance1, "for ", account, " in block ", 3)
+	fmt.Println("balance is ", balance1, "for ", account, " in block ", 2)
 
 	fbalance := new(big.Float)
 	fbalance.SetString(balance1.String())
