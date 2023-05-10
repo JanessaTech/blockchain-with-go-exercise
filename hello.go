@@ -4,6 +4,7 @@ import transactions "hi-supergirl/blockchain-with-go-exercise/Transactions"
 
 func main() {
 	//getstarted.CreateConn()
+
 	//accounts.ReadBalanceInfo()
 	//accounts.ERC20Testcases()
 	//accounts.CreateWallet()
@@ -11,6 +12,10 @@ func main() {
 	//accounts.ImportKeyStore()
 	//accounts.CheckPublicAddress()
 	//accounts.CheckAddressIsSmartContract()
+
 	//transactions.QueryBlockHeaderInfo()
-	transactions.QueryFullBlock()
+	//transactions.QueryFullBlock()
+	transactions.QueryTxInfo()
+	//transactions.QueryrChainID()
+	//transactions.QueryTransactionReceipt()
 }

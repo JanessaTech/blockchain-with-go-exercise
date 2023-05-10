@@ -8,6 +8,7 @@ import (
 	"math/big"
 )
 
+// before call this method, make sure ganache is ready and there are at least 2 blocks mined
 func QueryBlockHeaderInfo() {
 	client := getstarted.CreateConn()
 
@@ -19,6 +20,7 @@ func QueryBlockHeaderInfo() {
 	fmt.Println(header.Number.String())
 }
 
+// before call this method, make sure ganache is ready and there are at least 2 blocks mined
 func QueryFullBlock() {
 	client := getstarted.CreateConn()
 	blockNumber := big.NewInt(2)
