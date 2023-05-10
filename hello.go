@@ -8,5 +8,6 @@ func main() {
 	//accounts.ERC20Testcases()
 	//accounts.CreateWallet()
 	//accounts.CreateKeyStore()
-	accounts.ImportKeyStore()
+	//accounts.ImportKeyStore()
+	accounts.CheckPublicAddress()
 }

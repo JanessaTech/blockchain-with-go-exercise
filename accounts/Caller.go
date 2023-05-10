@@ -3,6 +3,7 @@ package accounts
 import (
 	accountbalances "hi-supergirl/blockchain-with-go-exercise/accounts/AccountBalances"
 	accounttokenbalances "hi-supergirl/blockchain-with-go-exercise/accounts/AccountTokenBalances"
+	addresscheck "hi-supergirl/blockchain-with-go-exercise/accounts/AddressCheck"
 	generatingnewwallets "hi-supergirl/blockchain-with-go-exercise/accounts/GeneratingNewWallets"
 	keystores "hi-supergirl/blockchain-with-go-exercise/accounts/Keystores"
 )
@@ -25,4 +26,8 @@ func CreateKeyStore() {
 
 func ImportKeyStore() {
 	keystores.ImportKeyStore()
+}
+
+func CheckPublicAddress() {
+	addresscheck.CheckPublicAddress()
 }
