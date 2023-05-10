@@ -9,5 +9,6 @@ func main() {
 	//accounts.CreateWallet()
 	//accounts.CreateKeyStore()
 	//accounts.ImportKeyStore()
-	accounts.CheckPublicAddress()
+	//accounts.CheckPublicAddress()
+	accounts.CheckAddressIsSmartContract()
 }

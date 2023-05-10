@@ -31,3 +31,7 @@ func ImportKeyStore() {
 func CheckPublicAddress() {
 	addresscheck.CheckPublicAddress()
 }
+
+func CheckAddressIsSmartContract() {
+	addresscheck.CheckAddressIsSmartContract()
+}
