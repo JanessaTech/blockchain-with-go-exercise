@@ -6,5 +6,7 @@ func main() {
 	//getstarted.CreateConn()
 	//accounts.ReadBalanceInfo()
 	//accounts.ERC20Testcases()
-	accounts.CreateWallet()
+	//accounts.CreateWallet()
+	//accounts.CreateKeyStore()
+	accounts.ImportKeyStore()
 }
