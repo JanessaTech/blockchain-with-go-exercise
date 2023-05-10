@@ -18,7 +18,7 @@ import (
 //  3. Run command:  solcjs --abi erc20.sol (make sure you installed solc on your pc, in my case, it is windows)
 //     file erc20_sol_IERC20.abi will be created
 //  4. Run command:  abigen --abi=erc20_sol_IERC20.abi --pkg=token --out=erc20.go
-//  5. Copy the content of erc20.go to this folder. (need to change package name to erctokendemo)
+//  5. Copy the content of erc20.go to this folder. (need to change package name to accounttokenbalances)
 func ERC20Testcases() {
 	client := getstarted.CreateConn()
 	tokenAddress := common.HexToAddress("0x0F1C3B16E0626e0d9d0f910D536AFf75b6e2e353") // the address of METoken
