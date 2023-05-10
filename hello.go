@@ -1,6 +1,6 @@
 package main
 
-import "hi-supergirl/blockchain-with-go-exercise/accounts"
+import transactions "hi-supergirl/blockchain-with-go-exercise/Transactions"
 
 func main() {
 	//getstarted.CreateConn()
@@ -10,5 +10,7 @@ func main() {
 	//accounts.CreateKeyStore()
 	//accounts.ImportKeyStore()
 	//accounts.CheckPublicAddress()
-	accounts.CheckAddressIsSmartContract()
+	//accounts.CheckAddressIsSmartContract()
+	//transactions.QueryBlockHeaderInfo()
+	transactions.QueryFullBlock()
 }
