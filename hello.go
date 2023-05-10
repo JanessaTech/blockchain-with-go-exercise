@@ -15,7 +15,8 @@ func main() {
 
 	//transactions.QueryBlockHeaderInfo()
 	//transactions.QueryFullBlock()
-	transactions.QueryTxInfo()
+	//transactions.QueryTxInfo()
 	//transactions.QueryrChainID()
 	//transactions.QueryTransactionReceipt()
+	transactions.SendEther()
 }

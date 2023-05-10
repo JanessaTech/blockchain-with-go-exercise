@@ -21,7 +21,7 @@ func CreateWallet() {
 
 	// retrieve the public key from the private key above
 	publicKey := privateKey.Public()
-	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
+	publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey) // the syntax is called type assertion: publicKey.(<expectedType>)
 	if !ok {
 		log.Fatal("cannot assert type: publicKey is not of type *ecdsa.PublicKey")
 	}

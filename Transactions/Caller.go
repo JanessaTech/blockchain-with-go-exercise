@@ -3,6 +3,7 @@ package transactions
 import (
 	queryingblocks "hi-supergirl/blockchain-with-go-exercise/Transactions/QueryingBlocks"
 	queryingtransactions "hi-supergirl/blockchain-with-go-exercise/Transactions/QueryingTransactions"
+	transferringeth "hi-supergirl/blockchain-with-go-exercise/Transactions/TransferringETH"
 )
 
 func QueryBlockHeaderInfo() {
@@ -23,4 +24,8 @@ func QueryrChainID() {
 
 func QueryTransactionReceipt() {
 	queryingtransactions.QueryTransactionReceipt()
+}
+
+func SendEther() {
+	transferringeth.SendEther()
 }
