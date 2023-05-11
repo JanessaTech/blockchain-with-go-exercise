@@ -17,6 +17,12 @@ import (
 
 // before running this method, make sure ganache is ready with port 8545
 // mnemonic is "lady never blame vintage world talent believe almost apology knee keep scout" when start ganache
+// Here are command we used to generate Store.go. I assume you have solc(solcjs on windows) and abigen installed on you local
+// solcjs --abi Store.sol -o build
+// solcjs --bin Store.sol -o build
+// abigen --abi=./build/Store_sol_Store.abi --pkg=store --out=Store.go
+// abigen --abi ./build/Store_sol_Store.abi --pkg store --type Store --out Store.go --bin Store_sol_Store.bin
+// Copy Store.go to ./store folder revative to the current file
 func DeployContract() {
 	client := getstarted.CreateConn()
 
@@ -29,9 +35,9 @@ func DeployContract() {
 	}
 
 	fmt.Println(address.Hex()) // the address of the newly create contract
-	// 0xaB78f3724EFF846A0baDdBBDd0c61c5594a3d195
+	// 0xaB78f3724EFF846A0baDdBBDd0c61c5594a3d195   . The address is different every time you deploy the contract
 	fmt.Println(tx.Hash().Hex()) // The hash id of the transaction used to deploy contract
-	// 0x81aefe49fe24b72968b26400f599c8eaddcdff0ceb4bb117daadb53f1891301f
+	// 0x81aefe49fe24b72968b26400f599c8eaddcdff0ceb4bb117daadb53f1891301f    . hash id is different every time you deploy the contract
 
 	_ = instance // we'll be using this in the next section
 
@@ -80,7 +86,8 @@ func getAuth(client *ethclient.Client) *bind.TransactOpts {
 func LoadContract() *store.Store {
 	client := getstarted.CreateConn()
 
-	address := common.HexToAddress("0xaB78f3724EFF846A0baDdBBDd0c61c5594a3d195")
+	address := common.HexToAddress("0xaB78f3724EFF846A0baDdBBDd0c61c5594a3d195") // the address of the newly create contract deployed in DeployContract()
+
 	instance, err := store.NewStore(address, client)
 	if err != nil {
 		log.Fatal(err)
@@ -115,7 +122,7 @@ func WriteContract() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("tx sent: %s\n", tx.Hash().Hex()) //0x9c604fbfae289d592bd9ee1e4818ed08d98ac2f075d5b449352e3844dc983f1e
+	fmt.Printf("tx sent: %s\n", tx.Hash().Hex()) //0x9c604fbfae289d592bd9ee1e4818ed08d98ac2f075d5b449352e3844dc983f1e  , the tx hash id. it is different everytime you write the contract
 
 	result, err := instance.Items(nil, key)
 	if err != nil {

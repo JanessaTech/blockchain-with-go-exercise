@@ -1,0 +1,5 @@
+package eventlog
+
+func ReadEventLogs() {
+
+}
