@@ -16,7 +16,7 @@ import (
 )
 
 // Some explanations about this demo:
-//   - This demo is doing the exact the same as what accounttokenbalances.ERC20Testcases is doing
+//   - This demo is doing exactly the same as what accounttokenbalances.ERC20Testcases is doing
 //   - The difference between this demo and  accounttokenbalances.ERC20Testcases is
 //     this demo uses raw transaction to call transfer() by mannually constructing data part
 //     whereras accounttokenbalances.ERC20Testcases uses go binding with the help of abigen to call transfer()
@@ -30,7 +30,7 @@ import (
 func TransferERC20() {
 	client := getstarted.CreateConn()
 
-	privateKey, err := crypto.HexToECDSA("daf1e04560cd49a5f240d541680e0710d1b2617da21032d193c6a789f392488f")
+	privateKey, err := crypto.HexToECDSA("daf1e04560cd49a5f240d541680e0710d1b2617da21032d193c6a789f392488f") // the private key of the first account
 	if err != nil {
 		log.Fatal(err)
 	}

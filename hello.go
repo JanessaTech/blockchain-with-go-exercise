@@ -1,6 +1,6 @@
 package main
 
-import transactions "hi-supergirl/blockchain-with-go-exercise/Transactions"
+import "hi-supergirl/blockchain-with-go-exercise/smartcontract"
 
 func main() {
 	//getstarted.CreateConn()
@@ -20,5 +20,10 @@ func main() {
 	//transactions.QueryTransactionReceipt()
 	//transactions.SendEther()
 	//transactions.TransferERC20()
-	transactions.MonitorNewBlock() //notifications not supported
+	//transactions.MonitorNewBlock() //notifications not supported
+
+	//smartcontract.DeployContract()
+	//smartcontract.LoadContract()
+	//smartcontract.QueryContract()
+	smartcontract.WriteContract()
 }
