@@ -18,5 +18,6 @@ func main() {
 	//transactions.QueryTxInfo()
 	//transactions.QueryrChainID()
 	//transactions.QueryTransactionReceipt()
-	transactions.SendEther()
+	//transactions.SendEther()
+	transactions.TransferERC20()
 }

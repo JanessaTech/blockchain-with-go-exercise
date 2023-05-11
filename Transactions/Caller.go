@@ -4,6 +4,7 @@ import (
 	queryingblocks "hi-supergirl/blockchain-with-go-exercise/Transactions/QueryingBlocks"
 	queryingtransactions "hi-supergirl/blockchain-with-go-exercise/Transactions/QueryingTransactions"
 	transferringeth "hi-supergirl/blockchain-with-go-exercise/Transactions/TransferringETH"
+	transferringtokenserc20 "hi-supergirl/blockchain-with-go-exercise/Transactions/TransferringTokensERC20"
 )
 
 func QueryBlockHeaderInfo() {
@@ -28,4 +29,8 @@ func QueryTransactionReceipt() {
 
 func SendEther() {
 	transferringeth.SendEther()
+}
+
+func TransferERC20() {
+	transferringtokenserc20.TransferERC20()
 }
