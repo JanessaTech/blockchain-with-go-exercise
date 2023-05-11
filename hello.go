@@ -19,5 +19,6 @@ func main() {
 	//transactions.QueryrChainID()
 	//transactions.QueryTransactionReceipt()
 	//transactions.SendEther()
-	transactions.TransferERC20()
+	//transactions.TransferERC20()
+	transactions.MonitorNewBlock() //notifications not supported
 }

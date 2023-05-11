@@ -3,6 +3,7 @@ package transactions
 import (
 	queryingblocks "hi-supergirl/blockchain-with-go-exercise/Transactions/QueryingBlocks"
 	queryingtransactions "hi-supergirl/blockchain-with-go-exercise/Transactions/QueryingTransactions"
+	subscribingtonewblocks "hi-supergirl/blockchain-with-go-exercise/Transactions/SubscribingToNewBlocks"
 	transferringeth "hi-supergirl/blockchain-with-go-exercise/Transactions/TransferringETH"
 	transferringtokenserc20 "hi-supergirl/blockchain-with-go-exercise/Transactions/TransferringTokensERC20"
 )
@@ -33,4 +34,8 @@ func SendEther() {
 
 func TransferERC20() {
 	transferringtokenserc20.TransferERC20()
+}
+
+func MonitorNewBlock() {
+	subscribingtonewblocks.Subscribe()
 }
