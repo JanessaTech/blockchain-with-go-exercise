@@ -33,9 +33,10 @@ type LogApproval struct {
 // - Ganache is ready with port 8545.
 // - mnemonic is "lady never blame vintage world talent believe almost apology knee keep scout" when start ganache
 // - You have deployed Store.sol by running all methods defined in smartcontract.OpStore.go
-// - When you run methods defined in smartcontract.OpStore.go make sure : in order:
+// - When you run methods defined in smartcontract.OpStore.go make sure :
 //    -- run methods in this order: 1. DeployContract 2. WriteContract
 //    -- Once you done DeployContract, modify line89 with the laest address of Store.sol
+//    -- update contractAddress with the latest address of Store.sol (at line 44 in this file)
 
 func ReadEventLogs() {
 	client := getstarted.CreateConn()

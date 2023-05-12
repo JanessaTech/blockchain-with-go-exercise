@@ -1,7 +1,7 @@
 package main
 
 import (
-	"hi-supergirl/blockchain-with-go-exercise/eventlog"
+	signatures "hi-supergirl/blockchain-with-go-exercise/Signatures"
 )
 
 func main() {
@@ -31,5 +31,7 @@ func main() {
 	//smartcontract.WriteContract()
 
 	//eventlog.ReadEventLogs()
-	eventlog.Reading_ERC_20_Token_Event_Logs()
+	//eventlog.Reading_ERC_20_Token_Event_Logs()
+
+	signatures.GnerateAndVerifySignature()
 }
