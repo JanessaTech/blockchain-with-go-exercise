@@ -1,5 +1,9 @@
 package main
 
+import (
+	"hi-supergirl/blockchain-with-go-exercise/eventlog"
+)
+
 func main() {
 	//getstarted.CreateConn()
 
@@ -25,4 +29,7 @@ func main() {
 	//smartcontract.LoadContract()
 	//smartcontract.QueryContract()
 	//smartcontract.WriteContract()
+
+	//eventlog.ReadEventLogs()
+	eventlog.Reading_ERC_20_Token_Event_Logs()
 }
