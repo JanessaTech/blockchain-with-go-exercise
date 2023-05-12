@@ -83,7 +83,7 @@ func ReadEventLogs() {
 // - mnemonic is "lady never blame vintage world talent believe almost apology knee keep scout" when start ganache
 // - run truffle migrate to deploy contracts. See code: https://github.com/hi-supergirl/exercises/tree/master/blockchain/get-started/truffle/token/ERC20/demo1
 // - Once deployment is finished, you will see an event Transfer is existing in ganache
-// - Check the address of METoken, update the value with the lastest address of METoken
+// - Check the address of METoken, update the value of contractAddress with the lastest address of METoken
 func Reading_ERC_20_Token_Event_Logs() {
 	client := getstarted.CreateConn()
 
