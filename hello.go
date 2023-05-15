@@ -1,8 +1,6 @@
 package main
 
-import (
-	signatures "hi-supergirl/blockchain-with-go-exercise/Signatures"
-)
+import testing "hi-supergirl/blockchain-with-go-exercise/Testing"
 
 func main() {
 	//getstarted.CreateConn()
@@ -33,5 +31,7 @@ func main() {
 	//eventlog.ReadEventLogs()
 	//eventlog.Reading_ERC_20_Token_Event_Logs()
 
-	signatures.GnerateAndVerifySignature()
+	//signatures.GnerateAndVerifySignature()
+
+	testing.MockTest()
 }
